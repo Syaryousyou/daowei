@@ -1,0 +1,325 @@
+body{
+  background: #f8f8f8;
+}
+.dContent{
+  width: 100%;
+}
+.dContent > .conHeader{
+  width: 100%;
+  margin-top: 10px;
+  height: 140px;
+  background: #fff;
+}
+.dContent > .conHeader > .inner{
+  width: 1200px;
+  margin: 0 auto;
+  height: 140px;
+}
+.dContent > .conHeader > .inner > .hLeft{
+  float: left;
+  height: 120px;
+  margin-top: 10px;
+  margin-left: 20px;
+  line-height: 140px;
+}
+.dContent > .conHeader > .inner > .hLeft > .name{
+  font-size: 36px;
+  font-weight: 900;
+  color: #000;
+}
+.dContent > .conHeader > .inner > .hLeft > .time{
+  font-size: 14px;
+  color: #929292;
+  margin: 0 10px;
+}
+.dContent > .conHeader > .inner > .hLeft > .time > span{
+  color: #000;
+}
+.dContent > .conHeader > .inner > .hLeft > .pre{
+  font-size: 14px;
+  color: #929292;
+}
+.dContent > .conHeader > .inner > .hLeft > .pre > span{
+  color: #e94840;
+}
+.dContent > .conHeader > .inner > .hRight{
+  float: right;
+  height: 120px;
+  box-sizing: border-box;
+  padding-top: 70px;
+}
+.dContent > .conHeader > .inner > .hRight > div{
+  display: inline-block;
+  text-align: center;
+  margin: 0 20px;
+  font-size: 14px;
+}
+.dContent > .conHeader > .inner > .hRight > span{
+  position: relative;
+  bottom: 10px;
+  color: #929292;
+}
+.dContent > .conHeader > .inner > .hRight .count{
+  font-size: 14px;
+  color: #e94840;
+  margin-bottom: 5px;
+}
+
+.dContent > .conNav{
+  width: 100%;
+  height: 40px;
+  background: #323434;
+  line-height: 40px;
+}
+.dContent > .conNav > .list{
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+.dContent > .conNav > .list > .item{
+  float: left;
+  height: 100%;
+  width: 140px;
+  font-size: 14px;
+  text-align: center;
+}
+.dContent > .conNav > .list > .item > a{
+  color: #fff;
+  display: block;
+}
+
+.dContent > .conMain{
+  width: 1200px;
+  margin: 20px auto 0;
+}
+.dContent > .conMain > .conMainLeft{
+  width: 970px;
+  background: #fff;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 50px;
+}
+.dContent > .conMain > .conMainLeft >.leftTil{
+  font-weight: 900;
+  color: #000;
+  height: 59px;
+  box-sizing: border-box;
+  margin: 0 29px;
+  font-size: 16px;
+  line-height: 59px;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+.dContent > .conMain > .conMainLeft >.leftTil::after{
+  content: '';
+  display: block;
+  width: 62px;
+  height: 5px;
+  background: #e94840;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.dContent > .conMain > .conMainLeft > .itemBox{
+  width: 100%;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item{
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a{
+  display: block;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a > img{
+  float: left;
+  margin: 25px;
+  width: 148px;
+  height: 148px;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a >.itemDes{
+  width: 64%;
+  margin: 25px 0;
+  float: left;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a >.itemDes > span{
+  display: block;
+  height: 42px;
+  line-height: 42px;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a >.itemDes > .name{
+  font-size: 18px;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a >.itemDes > .des{
+  font-size: 14px;
+  color: #929292;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a >.itemDes > .price{
+  margin-top: 10px;
+  color: #e94840;
+  font-size: 14px;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a >.itemDes > .price > span{
+  font-size: 30px;
+  font-weight: 700;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .item > a > .sale{
+  float: left;
+  color: #929292;
+  font-size: 14px;
+  margin-top: 150px;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .more{
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  background: #f8f8f8;
+}
+.dContent > .conMain > .conMainLeft > .itemBox > .more > span{
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  font-size: 16px;
+  color: #b1b1b1;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.dContent > .conMain > .conMainLeft > .shopPro > .company{
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  margin: 10px 25px;
+}
+.dContent > .conMain > .conMainLeft > .shopPro > .company > img{
+  vertical-align: middle;
+}
+.dContent > .conMain > .conMainLeft > .shopPro > .shopDes{
+  line-height: 28px;
+  font-size: 16px;
+  margin: 10px 25px 25px;
+}
+.dContent > .conMain > .conMainLeft > .line1{
+  background: #f8f8f8;
+  height: 10px;
+}
+.dContent > .conMain > .conMainLeft > .comments{
+  width: 100%;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment{
+  width: 96%;
+  margin: 0 3%;
+  padding-top: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment > img{
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight{
+  float: left;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight > div{
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight >.rating > img{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight > .ratCon{
+  font-size: 16px;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight > .point{
+  font-size: 14px;
+  margin: 15px 0;
+  color: #898989;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight > .point > img{
+  width: 10px;
+  height: 10px;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight > .back{
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight > .back > .baTil{
+  color: #00e0d3;
+}
+.dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight > .back > .baCon{
+  color: #898989;
+}
+.dContent > .conMain > .conMainLeft > .pages{
+  width: 100%;
+  height: 152px;
+  line-height: 152px;
+  text-align: center;
+}
+.dContent > .conMain > .conMainLeft > .pages > .pre ,
+.dContent > .conMain > .conMainLeft > .pages > .next{
+  display: inline-block;
+  width: 78px;
+  height: 28px;
+  line-height: 28px;
+  color: #929292;
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.dContent > .conMain > .conMainLeft > .pages > .pageCount{
+  display: inline-block;
+}
+.dContent > .conMain > .conMainLeft > .pages > .pageCount > .num{
+  display: inline-block;
+  width: 30px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  color: #000;
+  margin: 0 5px;
+  transition: color .3s;
+}
+.dContent > .conMain > .conMainLeft > .pages > .pageCount > .num.active{
+  background: #e94840;
+  color: #ffffff;
+}
+.dContent > .conMain > .conMainLeft > .pages > .pageCount > .num:hover{
+  background: #e94840;
+  color: #ffffff;
+
+}
+.dContent > .conMain > .conMainRight{
+  width: 230px;
+  box-sizing: border-box;
+  float: right;
+  padding-left: 10px;
+}
+.dContent > .conMain > .conMainRight >.erWrap{
+  width: 230px;
+  height: 290px;
+  padding-top: 50px;
+  background-image: url("../images/deBg01.jpg");
+  background-repeat: no-repeat;
+}
+.dContent > .conMain > .conMainRight >.erWrap:nth-child(2){
+  background-image: url("../images/deBg02.jpg");
+  background-repeat: no-repeat;
+}
+.dContent > .conMain > .conMainRight >.erWrap > .erweima{
+  width: 130px;
+  height: 130px;
+  margin-left: 50px;
+}
+
+

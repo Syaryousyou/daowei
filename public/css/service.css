@@ -1,0 +1,99 @@
+.sContent{
+  width: 100%;
+  background: #FBF8F8;
+}
+.sContent > .conTitle{
+  width: 1200px;
+  margin: 0 auto;
+  height: 85px;
+  line-height: 85px;
+}
+.sContent > .conTitle > span {
+  font-size: 18px;
+  font-weight: 700;
+}
+.sContent > .conMain{
+  width: 1200px;
+  margin: 0 auto;
+}
+.sContent > .conMain > .conMainLeft{
+  width: 970px;
+  float: left;
+}
+.sContent > .conMain > .conMainLeft > .conMainList > .conMainItem{
+  width: 232px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  cursor: pointer;
+  float: left;
+}
+.sContent > .conMain > .conMainLeft > .conMainList > .conMainItem:hover{
+  box-shadow: 5px 5px 10px 3px #e5e5e5;
+}
+.sContent > .conMain > .conMainLeft > .conMainList > .conMainItem > img{
+  width: 100%;
+}
+.sContent > .conMain > .conMainLeft > .conMainList > .conMainItem > .title{
+  height: 26px;
+  margin-top: 15px;
+  line-height: 26px;
+}
+.sContent > .conMain > .conMainLeft > .conMainList > .conMainItem > .title > .iconfont{
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+.sContent > .conMain > .conMainLeft > .conMainList > .conMainItem > .title > .text{
+  font-size: 16px;
+  font-weight: 700;
+}
+.sContent > .conMain > .conMainLeft > .conMainList > .conMainItem > .order{
+  font-size: 12px;
+  color: #929292;
+  height: 26px;
+  line-height: 26px;
+}
+.sContent > .conMain > .conMainLeft > .conMainList > .conMainItem > .order > .rating{
+  float: right;
+}
+.sContent > .conMain > .conMainRight{
+  float: right;
+  width: 230px;
+}
+.sContent > .conMain > .conMainRight > img {
+  cursor: pointer;
+}
+.sContent > .conMain > .conMainRight > .cjoin{
+  margin-top: 10px;
+  height: 290px;
+  background-image: url("../images/erweima.jpg");
+  background-repeat: no-repeat;
+}
+.sContent > .conMain > .conMainRight > .cjoin > img{
+  width: 130px;
+  margin: 50px 0 0 50px;
+}
+.sContent > .conMain > .conMainLeft > .conFooter {
+  width: 100%;
+  margin: 0 auto;
+  height: 152px;
+  text-align: center;
+}
+.sContent > .conMain > .conMainLeft > .conFooter > .conFooterTil{
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin: 50px 5px;
+  background: #fff;
+  font-size: 16px;
+  color: #b1b1b1;
+  cursor: pointer;
+}
+
