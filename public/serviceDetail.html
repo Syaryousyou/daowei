@@ -116,6 +116,66 @@
             <span class="sale">已售275</span>
           </a>
         </div>
+        <div class="item">
+          <a class="clearFix" href="javascript:;">
+            <img src="./images/d01.jpg" alt="">
+            <div class="itemDes">
+              <span class="name">特价柔体拉筋术</span>
+              <span class="des">柔体拉筋术:60分钟
+              服务姿势：卧姿
+              适用介绍：
+              经络堵塞、...
+            </span>
+              <span class="price"><span>246</span>元/次</span>
+            </div>
+            <span class="sale">已售275</span>
+          </a>
+        </div>
+        <div class="item">
+          <a class="clearFix" href="javascript:;">
+            <img src="./images/d01.jpg" alt="">
+            <div class="itemDes">
+              <span class="name">特价柔体拉筋术</span>
+              <span class="des">柔体拉筋术:60分钟
+              服务姿势：卧姿
+              适用介绍：
+              经络堵塞、...
+            </span>
+              <span class="price"><span>246</span>元/次</span>
+            </div>
+            <span class="sale">已售275</span>
+          </a>
+        </div>
+        <div class="item">
+          <a class="clearFix" href="javascript:;">
+            <img src="./images/d01.jpg" alt="">
+            <div class="itemDes">
+              <span class="name">特价柔体拉筋术</span>
+              <span class="des">柔体拉筋术:60分钟
+              服务姿势：卧姿
+              适用介绍：
+              经络堵塞、...
+            </span>
+              <span class="price"><span>246</span>元/次</span>
+            </div>
+            <span class="sale">已售275</span>
+          </a>
+        </div>
+        <div class="item">
+          <a class="clearFix" href="javascript:;">
+            <img src="./images/d01.jpg" alt="">
+            <div class="itemDes">
+              <span class="name">特价柔体拉筋术</span>
+              <span class="des">柔体拉筋术:60分钟
+              服务姿势：卧姿
+              适用介绍：
+              经络堵塞、...
+            </span>
+              <span class="price"><span>246</span>元/次</span>
+            </div>
+            <span class="sale">已售275</span>
+          </a>
+        </div>
         <div class="more">
           <span>查看更多项目<i class="iconfont icon-xiajiantou"></i></span>
         </div>
@@ -139,27 +199,7 @@
         用户评论
       </div>
       <div class="comments">
-        <div class="comment clearFix">
-          <img src="./images/avatar.png" alt="avatar">
-          <div class="commetnRight">
-            <div class="name">运营小强</div>
-            <div class="rating">
-              <img src="./images/star.png" alt="">
-              2018-06-07
-            </div>
-            <div class="ratCon">
-              工具齐全，准时到达，服务专业，着装规范，价格合理，态度热情
-            </div>
-            <div class="point">
-              <img src="./images/citypoint.png" alt="">
-              北京 朝阳区
-            </div>
-            <div class="back">
-              <span class="baTil">商家回复：</span>
-              <span class="baCon"> 感谢亲对老师的认可，欢迎下次继续预约，推荐关注店铺，你点到家为您提供绿色健康专业服务，有健康才有将来</span>
-            </div>
-          </div>
-        </div>
+
       </div>
       <div class="pages">
         <a class="pre" href="javascript:;">&lt上一页</a>
@@ -281,6 +321,51 @@
     </div>
   {{/each}}
 </script>
+<script id="comments" type="text/html">
+  {{each data}}
+  <div class="comment clearFix">
+    <img src={{$value.iconUrl}} alt="avatar">
+    <div class="commetnRight">
+      <div class="name">{{$value.nick}}</div>
+      <div class="rating">
+        {{if 5-$value.star ===0}}
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        {{else if 5-$value.star===1 }}
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        {{else if 5-$value.star===2 }}
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        {{else if 5-$value.star===3 }}
+        <img src="./images/star.png" alt="start">
+        <img src="./images/star.png" alt="start">
+        {{else if 5-$value.star===4 }}
+        <img src="./images/star.png" alt="start">
+        {{/if}}
+        {{$value.createtime}}
+      </div>
+      <div class="ratCon ellipsis">
+        {{$value.comment}}
+      </div>
+      <div class="point">
+        <img src="./images/citypoint.png" alt="">
+        {{$value.city}} {{$value.area}}
+      </div>
+      <div class="back">
+        <span class="baTil">商家回复：</span>
+        <span class="baCon"> 感谢亲对老师的认可，欢迎下次继续预约，推荐关注店铺，你点到家为您提供绿色健康专业服务，有健康才有将来</span>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</script>
 <script type="text/javascript">
   $(function () {
     $.get('http://localhost:4000/item', function (data) {
@@ -288,6 +373,12 @@
       var $conHeader = template('conHeader', {data: data})
       var $inner = $('.dContent > .conHeader > .inner')
       $inner.html($conHeader)
+    })
+    $.get('http://localhost:4000/comment?page=0', function (data) {
+      console.log(data)
+      var $comments = template('comments', {data: data})
+      var $comment  = $('.dContent > .conMain > .conMainLeft > .comments')
+      $comment.html($comments)
     })
   })
 </script>

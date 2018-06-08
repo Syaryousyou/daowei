@@ -148,7 +148,7 @@
 <script type="text/javascript" src="./js/header.js"></script>
 <script id="contentTem" type="text/html">
   {{each data}}
-    <li class="conMainItem">
+    <li class="conMainItem" id={{$value.id}} onclick="goServiceDetail(id)">
       <img src={{$value.imgUrl}} alt="01">
       <p class="title">
         <i class="iconfont icon-home"></i>
@@ -170,6 +170,9 @@
       $conMainList.html(conTem)
     })
   })
+  function goServiceDetail(id) {
+    window.location.href = './serviceDetail.html?serviceId='+id;
+  }
 </script>
 </body>
 </html>

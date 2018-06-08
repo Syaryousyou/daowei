@@ -3,6 +3,7 @@ body{
 }
 .dContent{
   width: 100%;
+  padding-top: 1px;
 }
 .dContent > .conHeader{
   width: 100%;
@@ -234,7 +235,6 @@ body{
 .dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight >.rating > img{
   width: 10px;
   height: 10px;
-  margin-right: 10px;
 }
 .dContent > .conMain > .conMainLeft > .comments > .comment >.commetnRight > .ratCon{
   font-size: 16px;
@@ -278,6 +278,7 @@ body{
 }
 .dContent > .conMain > .conMainLeft > .pages > .pageCount{
   display: inline-block;
+  width: 479px;
 }
 .dContent > .conMain > .conMainLeft > .pages > .pageCount > .num{
   display: inline-block;
