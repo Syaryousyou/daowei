@@ -271,10 +271,15 @@ body{
   width: 78px;
   height: 28px;
   line-height: 28px;
-  color: #929292;
+  color: black;
   border: 1px solid #e5e5e5;
   font-size: 14px;
   vertical-align: middle;
+}
+.dContent > .conMain > .conMainLeft > .pages > .pre.active ,
+.dContent > .conMain > .conMainLeft > .pages > .next.active{
+  color: #929292;
+  background: #e5e5e5;
 }
 .dContent > .conMain > .conMainLeft > .pages > .pageCount{
   display: inline-block;
@@ -291,6 +296,7 @@ body{
   margin: 0 5px;
   transition: color .3s;
 }
+/*.dContent > .conMain > .conMainLeft > .pages > .pageCount > .num:nth-child(1),*/
 .dContent > .conMain > .conMainLeft > .pages > .pageCount > .num.active{
   background: #e94840;
   color: #ffffff;

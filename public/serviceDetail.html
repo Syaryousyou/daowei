@@ -204,17 +204,7 @@
       <div class="pages">
         <a class="pre" href="javascript:;">&lt上一页</a>
         <div class="pageCount">
-          <a class="num active" href="javascript:;">1</a>
-          <a class="num" href="javascript:;">2</a>
-          <a class="num" href="javascript:;">3</a>
-          <a class="num" href="javascript:;">4</a>
-          <a class="num" href="javascript:;">5</a>
-          <a class="num" href="javascript:;">6</a>
-          <a class="num" href="javascript:;">7</a>
-          <a class="num" href="javascript:;">8</a>
-          <a class="num" href="javascript:;">9</a>
-          <a class="num" href="javascript:;">10</a>
-          ...
+
         </div>
         <a class="next" href="javascript:;">下一页&gt</a>
       </div>
@@ -366,6 +356,11 @@
   </div>
   {{/each}}
 </script>
+<script id="pages" type="text/html">
+  {{each data}}
+  <a id={{$index}} class="num" href="javascript:;" onclick="pages(id)">{{$value}}</a>
+  {{/each}}
+</script>
 <script type="text/javascript">
   $(function () {
     $.get('http://localhost:4000/item', function (data) {
@@ -374,12 +369,68 @@
       var $inner = $('.dContent > .conHeader > .inner')
       $inner.html($conHeader)
     })
+    $.get('http://localhost:4000/comment', function (data) {
+      console.log(data)
+      var $pages = template('pages', {data: data})
+      var $pageWrap  = $('.dContent > .conMain > .conMainLeft > .pages > .pageCount')
+      $pageWrap.html($pages)
+      pageCha(0)
+    })
     $.get('http://localhost:4000/comment?page=0', function (data) {
       console.log(data)
       var $comments = template('comments', {data: data})
       var $comment  = $('.dContent > .conMain > .conMainLeft > .comments')
       $comment.html($comments)
+      $pages = $('.dContent > .conMain > .conMainLeft > .pages > .pageCount > .num')
     })
+  })
+  var num =0
+  var $pages = $('.dContent > .conMain > .conMainLeft > .pages > .pageCount > .num')
+  var $pre = $('.dContent > .conMain > .conMainLeft > .pages > .pre ')
+  var $next = $('.dContent > .conMain > .conMainLeft > .pages > .next')
+  function pages (id) {
+    num = id
+    $.get("http://localhost:4000/comment?page=" + id , function (data) {
+      // console.log(data)
+      var $comments = template('comments', {data: data})
+      var $comment  = $('.dContent > .conMain > .conMainLeft > .comments')
+      $comment.html($comments)
+    })
+    pageCha(id)
+  }
+// 页数样式变化函数
+  function pageCha(num) {
+    var $pages = $('.dContent > .conMain > .conMainLeft > .pages > .pageCount > .num')
+    $next.removeClass('active')
+    $pre.removeClass('active')
+    if (num==0) {
+      $pre.addClass('active')
+    } else if (num==8) {
+      $next.addClass('active')
+    }
+    $($pages[num]).siblings().removeClass('active');
+    $($pages[num]).addClass('active')
+  }
+
+// 上一页&下一页
+  $pre.click(function () {
+    $next.removeClass('active')
+    num--
+    if (num<0) {
+      num = 0
+      $pre.addClass('active')
+      // num = $pages.length-1
+    }
+    pages(num)
+  })
+  $next.click(function () {
+    $pre.removeClass('active')
+    num++
+    if (num>=$pages.length) {
+      num = $pages.length-1
+      $next.addClass('active')
+    }
+    pages(num)
   })
 </script>
 </body>

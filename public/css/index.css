@@ -8,16 +8,17 @@
 }
 .header.active{
   position: fixed;
-  background: rgba(255, 255, 255, 0.96);
   z-index: 10;
   animation: fixed 1s;
 }
 @keyframes fixed {
   from{
     transform: translateY(-71px);
+    background: #fff;
   }
   to{
     transform: translateY(0px);
+    background: rgba(255, 255, 255, 0.96);
   }
 }
 .header > .headerCon{

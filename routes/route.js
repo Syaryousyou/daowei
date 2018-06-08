@@ -16,9 +16,17 @@ router.get('/item',function (req,res) {
   res.send(item)
 })
 router.get('/comment',function (req,res) {
-  var page = req.query.page/1;
-  var comment = comments.slice(page*10,10*(page+1))
-  res.send(comment)
+  if (req.query.page){
+    var page = req.query.page/1;
+    var comment = comments.slice((page)*10,10*(page+1))
+    res.send(comment)
+  } else {
+    var arr = []
+    for (var i = 1; i<=comments.length/10; i++){
+      arr.push(i)
+    }
+    res.send(arr)
+  }
 })
 
 module.exports = router;
